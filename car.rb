@@ -57,7 +57,7 @@ class Car < Vehicle
   end
 
   def get_info
-    
+
   end
 end
 
