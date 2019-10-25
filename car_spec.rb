@@ -248,13 +248,27 @@ end
 describe "Car" do
   it "can be called upon to tell all its information" do
     new_car = Car.new(2000)
-    expect(new_car.get_info).to eq 4
+    expect(new_car.get_info['horn']).to eq 'BEEP!'
+    expect(new_car.get_info['wheels']).to eq 4
+    expect(new_car.get_info['model year']).to eq 2000
+    expect(new_car.get_info['model']).to eq 'car'
+    expect(new_car.get_info['speed']).to eq 0
+    expect(new_car.get_info['lights']).to eq 'off'
+    expect(new_car.get_info['signal']).to eq 'off'
   end
 end
 
 #
 # Story: As a programmer, I can store and retrieve all of my cars from a garage. Hint: "Garage" is a noun, "store" and "retrieve" are verbs.
 
+describe "Car" do
+  it "can store a car" do
+    new_car = Car.new(1999)
+    expect(Car.garage).to eq []
+
+  end
+
+  ??make a class garage or a method on the car?
 
 
 #

@@ -39,7 +39,7 @@ class Car < Vehicle
     @wheels = 4
     @horn = "BEEP!"
     @speed = 0
-    @model = "Car"
+    @model = "car"
   end
   def get_model
     @model
@@ -57,7 +57,10 @@ class Car < Vehicle
   end
 
   def get_info
-
+    {'model' => @model, 'model year' => @model_year, 'wheels' => @wheels, 'horn' => @horn, 'speed' => @speed, 'lights' => @lights, 'signal' => @signal}
+  end
+  def garage
+    []
   end
 end
 
@@ -117,5 +120,4 @@ class Tesla < Car
   def brake
     @speed -= 7
   end
-
 end
